@@ -20,7 +20,9 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
+ > * A lot of services and products that we use have recommendation systems: such as Amazon and its product recommendations, YouTube and its video recommendations, etc. Therefore it seems like this is an important program to understand and be familiar with. 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ 
  >   * [toolname](link) - Short description
  > * What will be the input/output of your project?
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
