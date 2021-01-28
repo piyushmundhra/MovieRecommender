@@ -20,14 +20,14 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
- > ** A lot of services and products that we use have recommendation systems: such as Amazon and its product recommendations, YouTube and its video recommendations, etc. Therefore it seems like this is an important program to understand and be familiar with. 
+ >   * A lot of services and products that we use have recommendation systems: such as Amazon and its product recommendations, YouTube and its video recommendations, etc. Therefore it seems like this is an important program to understand and be familiar with. 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > ** We plan to use Python, when working with large data sets and machine learning, its most sensible to use Python. 
+ >   * We plan to use Python, when working with large data sets and machine learning, its most sensible to use Python. 
  >   * [toolname](link) - Short description
  > * What will be the input/output of your project?
- > ** We plan to have the user rate a set of 10-15 movies, from which we will try to "calculate" their taste. We plan to output the movie we think they will like most (from where they can also opt to ask for another recommendation). 
+ >   * We plan to have the user rate a set of 10-15 movies, from which we will try to "calculate" their taste. We plan to output the movie we think they will like most (from where they can also opt to ask for another recommendation). 
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
- > ** 
+ >   * We are using the Facade Design Patter. We plan to develop an algorithm that helps us suggest a movie to a user. We do not want to overcomplicate the user experience, so we will have to be a way to hide the algorithm behind the user interface. We think it may be hard to get sufficient information from the user in a terminal based program, so we plan on finding a way to train the recommender system to use a small set of movies to understand the user's taste. 
  >   * Why you picked this pattern and what feature you will implement with it
  >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
  >   * Why the chosen design pattern will lead to a good solution to that problem
