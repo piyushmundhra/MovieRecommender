@@ -17,7 +17,7 @@ class Recommender:
     # movies : pd.DataFrame
     urlmovies = 'https://drive.google.com/file/d/1lacw_PaUsvlzpRemtnAfcKqGSkx1JBbY/view?usp=sharing'
     pathmovies = 'https://drive.google.com/uc?export=download&id=' + urlmovies.split('/')[-2]
-    movies = pd.read_csv('./IMDbmovies.csv', low_memory=False)
+    movies = pd.read_csv(pathmovies, low_memory=False)
 
     # ratings : pd.DataFrame
     urlratings = 'https://drive.google.com/file/d/1m4nj5Mf36sWq_8bfT_e0TiibyGo22s2p/view?usp=sharing'
@@ -27,7 +27,7 @@ class Recommender:
     # movieInfo : pd.DataFrame
     urlMI = 'https://drive.google.com/file/d/1b_Jmt75aZRBh2z5TxYXnOsA17l81H_TJ/view?usp=sharing'
     pathMI = 'https://drive.google.com/uc?export=download&id=' + urlMI.split('/')[-2]
-    movieInfo = pd.read_csv('movies_metadata.csv')
+    movieInfo = pd.read_csv(pathMI)
 
     # Dataset cleaning
     movies = movies.fillna(0)
