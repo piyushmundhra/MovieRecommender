@@ -15,22 +15,30 @@ class Recommender:
     tags = pd.read_csv(pathtags)
 
     # movies : pd.DataFrame
+    urlmovies = 'https://drive.google.com/file/d/1lacw_PaUsvlzpRemtnAfcKqGSkx1JBbY/view?usp=sharing'
+    pathmovies = 'https://drive.google.com/uc?export=download&id=' + urlmovies.split('/')[-2]
     movies = pd.read_csv('./IMDbmovies.csv', low_memory=False)
 
     # ratings : pd.DataFrame
-    ratings = pd.read_csv('./ratingsSmall.csv')
-    ratingsbig = pd.read_csv('./ratings.csv')
+    urlratings = 'https://drive.google.com/file/d/1m4nj5Mf36sWq_8bfT_e0TiibyGo22s2p/view?usp=sharing'
+    pathratings = 'https://drive.google.com/uc?export=download&id=' + urlratings.split('/')[-2]
+    ratings = pd.read_csv(pathratings)
 
     # movieInfo : pd.DataFrame
+    urlMI = 'https://drive.google.com/file/d/1b_Jmt75aZRBh2z5TxYXnOsA17l81H_TJ/view?usp=sharing'
+    pathMI = 'https://drive.google.com/uc?export=download&id=' + urlMI.split('/')[-2]
     movieInfo = pd.read_csv('movies_metadata.csv')
+
+    # Dataset cleaning
+    movies = movies.fillna(0)
+    movies['imdb_title_id'] = movies['imdb_title_id'].astype(str)
+    movies['imdb_title_id'] = movies['imdb_title_id'].str.replace('tt', '')
+
+    tags['imdbId'] = '0' + tags['imdbId'].astype(str)
 
     # Crosstab that accumulates user ratings and movie ID's
     ct1 = pd.pivot_table(ratings, values = 'rating', columns = ['movieId'], index = ['userId'] )
 
-    # MovieID will contain a list of recommendations that will accumulate over a single use
-    # of the program
-
-    # userTaste will be a Series that contains the user's ratings of the calibration moviess
     
     # getRecommendation() will add movie recommendations to the MovieID pd.Series every time it is call,
     # it will make sure that the movie has not already been recommended.
@@ -40,18 +48,11 @@ class Recommender:
 
     def __init__(self, uT):
         self.userTaste = uT
-        # Dataset cleaning
-        self.movies = self.movies.fillna(0)
-        self.movies['imdb_title_id'] = self.movies['imdb_title_id'].astype(str)
-        self.movies['imdb_title_id'] = self.movies['imdb_title_id'].str.replace('tt', '')
-
-        self.tags['imdbId'] = '0' + self.tags['imdbId'].astype(str)
 
 
 r = Recommender(pd.Series([0,0,0,0]))
-print(r.movies.head())
-print(r.tags.head())
+print(r.movies.shape)
+print(r.tags.shape)
 print(r.ratings.head())
-print(r.ratingsbig.head())
 print(r.ct1)
 
