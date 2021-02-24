@@ -7,7 +7,12 @@ class Recommender:
 
     # These DataFrames will contain all the information about the movies that will be used
     # to train the recommender.
-    tags = pd.read_csv('./links.csv')
+
+    # GitHub has limited file size so datasets will be stored remotely on Google Drive
+    urltags = 'https://drive.google.com/file/d/1_AHvEpjmG9u3HHXcme1W21vD91tQjXAc/view?usp=sharing'
+    pathtags = 'https://drive.google.com/uc?export=download&id=' + urltags.split('/')[-2]
+    tags = pd.read_csv(pathtags)
+
     movies = pd.read_csv('./IMDbmovies.csv', low_memory=False)
     ratings = pd.read_csv('./ratings.csv')
     movieInfo = pd.read_csv('movies_metadata.csv')
@@ -40,7 +45,7 @@ class Recommender:
 
 
 r = Recommender(pd.Series([0,0,0,0]))
-print(r.userTaste)
+print(r.userTaste.head(20))
 print(r.movies.head())
 print(r.tags.head())
 print(r.ratings.head(20))
