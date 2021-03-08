@@ -2,7 +2,7 @@
 import sys
 import pandas
 
-class userOptions:
+class Options:
 	# tags : pd.DataFrame
     urltags = 'https://drive.google.com/file/d/1_AHvEpjmG9u3HHXcme1W21vD91tQjXAc/view?usp=sharing'
     pathtags = 'https://drive.google.com/uc?export=download&id=' + urltags.split('/')[-2]
