@@ -31,7 +31,7 @@
  ## Installation/Usage
  > Instructions on installing and running your application: 
  > First, make sure you have python3 downloaded. You can do it from the Python download page. 
- > Then, we make sure we have the right version by doing python3 --version
+ > Then, we make sure we have the right version by doing python3 --version.
  > Once we are sure that the installation is Python 3.0 or above, we import pandas by using pip install pandas.
  > After that, we git clone the repository, which can be found in our github page. 
  > Then we go into the repository. using cd final-project-svole001-jhan136-pund001.
