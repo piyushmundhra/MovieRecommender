@@ -31,5 +31,7 @@
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > The testing of our project was conducted in two ways: manual testing and python's built in unittest library
+ > * Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
+ >   * The first screenshot shows our test of invalid inputs of the initial prompt, we tested all edge cases and made sure that the program was correctly handling them
  
