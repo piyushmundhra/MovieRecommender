@@ -14,9 +14,7 @@ class Recommender:
     # GitHub has limited file size so datasets will be stored remotely on Google Drive
 
     # tags : pd.DataFrame
-    tags = pd.read_csv('data/links.csv', low_memory=False)
-    tags = tags.astype(str)
-    tags['imdbId'] = '0'+tags['imdbId']
+    tags = pd.read_csv('data/links.csv', dtype=str, low_memory=False)
 
     # movies : pd.DataFrame
     movies = pd.read_csv('data/movies.csv', low_memory=False)
@@ -72,10 +70,10 @@ class Recommender:
         
     def has_movie(self, check):
         temp = len(self.tags[self.tags['imdbId'] == check])
-        if(temp != 0):
-            return True
-        else:
+        if(temp == 0):
             return False
+        else:
+            return True
 
     def __init__(self):
         self.imdb = True

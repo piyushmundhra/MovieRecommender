@@ -8,5 +8,5 @@ op = Options1()
 op.getUserTaste()
 op.giveUserRecs()
 op.giveUserRecs()
+
 r = Recommender()
-print(r.getRecommendation(r.imdbToMovie('0372784')))
