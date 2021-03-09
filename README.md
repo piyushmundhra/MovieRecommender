@@ -46,6 +46,8 @@
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked3.png width="450"/>
  >     * Lastly, we tested to make sure the program works when a user likes some movies: 
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/somemoviesliked.png width="450"/>
+ >     * The following screenshot checks to make sure that the exit program option succeeds for options1
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options1exit.png width="450" />
  >  * This part of the section goes over our testing for Options2. The unit tests for Options1 also tested the is_not_integer() function thoroughly. Below is a description of the manual testing of Options2. The Options2 class depends on the Recommender class (whose testing is done separately) to verify user input.
  >     * The image below shows an initial testing of getUserOptions()'s command line interaction. This function should only accept integer values between 1 and 10, rejecting all other types of values
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/nummovies.png width="450"/>
@@ -54,4 +56,4 @@
  >     * The image below is a test of the getUserRec() function. In Options2, it should reload the recommendations based on the previously specified movie. It also tests the restart program option given to the user. Both of these tests are successful.
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options1getrec.png width="450"/>
  >     * The following screenshot checks to make sure that the exit program option succeeds for options1
- >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options2exit.png width="450" />
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options1exit.png width="450" />
