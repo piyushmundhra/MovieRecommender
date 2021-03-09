@@ -19,7 +19,7 @@ class Options2(userOptions):
 			return True
 
 	def getUserOptions(self):
-		print("How many movies do you want in yout recommendation list? Please enter a whole number in between 1 and 10 (inclusive).\n")
+		print("How many movies do you want in your recommendation list? Please enter a whole number in between 1 and 10 (inclusive).\n")
  		
 		valid1 = False
 		temp1 = ""
