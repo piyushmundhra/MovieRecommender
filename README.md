@@ -32,10 +32,10 @@
  > Instructions on installing and running your application
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
- > * This part of the section goes over our testing for Options1. The unit tests for Options2 tested the is_not_integer() function thoroughly. Below is a description of the manual testing of Options1. This includes testing general and edge cases for invalid user input.
+ > * This part of the section goes over our testing for Options1. The unit tests for Options1 tested the is_not_integer() function thoroughly. Below is a description of the manual testing of Options1. This includes testing general and edge cases for invalid user input.
  >   * The first screenshot shows our test of invalid inputs of the initial prompt, we tested all edge cases and made sure that the program was correctly handling them. In this test, the following are the ordered inputs: '\n', '-', 'f', '-1', '-2'. 
  >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/initialPrompt.png width="450" />
- >   * Similarly, the next screenshot shows testing of invalid inputs for the movie rating segment of our Options2 derived class. Again, theordered inputs: '\n', '-', 'f', '-1', '-2'. We only include a screenshot of the testing done for the first movie, but the same tests were conducted for each consequent movie that has to be rated by the user. 
+ >   * Similarly, the next screenshot shows testing of invalid inputs for the movie rating segment of our Options1 derived class. Again, theordered inputs: '\n', '-', 'f', '-1', '-2'. We only include a screenshot of the testing done for the first movie, but the same tests were conducted for each consequent movie that has to be rated by the user. 
  >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/movieInvalidEntry.png width="450" />
  >   * Next, we had to test our getUserRecs() functionality for Options1. This derived class specifies that it will only give recommendations a number of times up to the number of movies the user liked (If the user likes 3 movies then we can only give up to 3 recommendations). So we tested this in three ways, the user liked no movies, the user likes all movies, or the user likes some movies. The following screenshots show the successful executions of our program on all three input categories. 
  >     * First we test to make sure the program works when a user likes no movies: 
@@ -55,5 +55,5 @@
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/getimdbidtest.png width="450"/>
  >     * The image below is a test of the getUserRec() function. In Options2, it should reload the recommendations based on the previously specified movie. It also tests the restart program option given to the user. Both of these tests are successful.
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options1getrec.png width="450"/>
- >     * The following screenshot checks to make sure that the exit program option succeeds for options1
+ >     * The following screenshot checks to make sure that the exit program option succeeds for Options2
  >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options1exit.png width="450" />
