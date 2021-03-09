@@ -32,18 +32,22 @@
  > Instructions on installing and running your application
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
- > * This part of the section goes over our manual testing for Options2
+ > * This part of the section goes over our testing for Options2. The unit tests for Options2 tested the is_not_integer() function thoroughly. Below is a description of the manual testing of Options2. This includes testing general and edge cases for invalid user input.
  >   * The first screenshot shows our test of invalid inputs of the initial prompt, we tested all edge cases and made sure that the program was correctly handling them. In this test, the following are the ordered inputs: '\n', '-', 'f', '-1', '-2'. 
- >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/initialPrompt.png width="500" />
+ >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/initialPrompt.png width="450" />
  >   * Similarly, the next screenshot shows testing of invalid inputs for the movie rating segment of our Options2 derived class. Again, theordered inputs: '\n', '-', 'f', '-1', '-2'. We only include a screenshot of the testing done for the first movie, but the same tests were conducted for each consequent movie that has to be rated by the user. 
- >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/movieInvalidEntry.png width="500" />
- >   * Next, we had to test our getUserRecs() functionality for Options2. This derived class specifies that it will only give recommendations up to the number of movies the user liked. So we tested this in three ways, the user liked no movies, the user likes all movies, or the user likes some movies. The following screenshots show the successful executions of our program on all three input categories. 
+ >   * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/movieInvalidEntry.png width="450" />
+ >   * Next, we had to test our getUserRecs() functionality for Options2. This derived class specifies that it will only give recommendations a number of times up to the number of movies the user liked (If the user likes 3 movies then we can only give up to 3 recommendations). So we tested this in three ways, the user liked no movies, the user likes all movies, or the user likes some movies. The following screenshots show the successful executions of our program on all three input categories. 
  >     * First we test to make sure the program works when a user likes no movies: 
- >     * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/nomoviesliked.png width="500"/>
+ >     * <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/nomoviesliked.png width="450"/>
  >     * Then we test to make sure the program works when a user likes all the movies: 
- >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked1.png width="500"/> 
- >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked2.png width="500"/> 
- >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked3.png width="500"/>
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked1.png width="450"/> 
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked2.png width="450"/> 
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/allmoviesliked3.png width="450"/>
  >     * Lastly, we tested to make sure the program works when a user likes some movies: 
- >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/somemoviesliked.png width="500"/>
- 
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/somemoviesliked.png width="450"/>
+ >  * This part of the section goes over our testing for Options1. The unit tests for Options1 also tested the is_not_integer() function thoroughly. Below is a description of the manual testing of Options1. The Options1 class depends on the Recommender class (whose testing is done separately) to verify user input.
+ >     * The image below shows an initial testing of getUserOptions()'s command line interaction. This function should only accept integer values between 1 and 10, rejecting all other types of values
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/nummovies.png width="450"/>
+ >     * The next image shows testing of getUserTaste()'s command line interaction. This function should only accept movies that are within Recommender's data. It relies on the has_movie() function in the Recommender class. It helps us verify a couple things: we know that the invalid inputs are being handled correcly and we also can see that it is recommending the correct amount of movies.
+ >     * <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/getimdbidtest.png width="450"/>
