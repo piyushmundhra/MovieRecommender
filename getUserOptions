@@ -1,0 +1,10 @@
+
+
+import sys
+import pandas
+def getUserOptions():	
+	ratings=input("What movie rating guideline do you want (G, PG, PG-13, R,NC-17)press none if not applicable")
+	language= input("What language should the movie be in (French, German, English, Hindi, etc),press none if not applicable")
+	genre= input("What genre of movies do you want to watch(Historical Fiction, Documentry, Science Fiction, etc)press none if not applicable")
+	director= input("What director's movie do you want to watch (ex Christopher Nolan, George Lucas, Steven Spielberg, James Cameron)press none if not applicable")
+
