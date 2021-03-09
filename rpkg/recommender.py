@@ -30,6 +30,9 @@ class Recommender:
     # Crosstab that accumulates user ratings and movie ID's
     ct1 = pd.pivot_table(ratings, values = 'rating', columns = ['movieId'], index = ['userId'] )
 
+    # indicates whether imdb or movie id is being used
+    imdb = True
+
     # id : string : imdbId of movie
     def imdbToMovie(self, id):
         temp = self.tags[self.tags['imdbId'] == id]
@@ -42,10 +45,10 @@ class Recommender:
     def getRecommendation(self, mvId):
 
         # isolates ratings of the current movie being used for recommendation
-        shrekRatings = self.ct1.loc[:,mvId]
+        movieRatings = self.ct1.loc[:,mvId]
 
         # computes the pairwise correlation of the selected movie and all other movies 
-        rec = self.ct1.corrwith(shrekRatings)
+        rec = self.ct1.corrwith(movieRatings)
         rec = rec.dropna()
         recdf = pd.DataFrame(rec, columns=['correlation'])
 
@@ -68,10 +71,5 @@ class Recommender:
         return final['title'][0:10]
         
 
-    def __init__(self, uT):
-        self.userTaste = uT
-
-
-
-
-
+    def __init__(self):
+        self.imdb = True
