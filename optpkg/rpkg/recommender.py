@@ -14,9 +14,7 @@ class Recommender:
     # GitHub has limited file size so datasets will be stored remotely on Google Drive
 
     # tags : pd.DataFrame
-    tags = pd.read_csv('data/links.csv', low_memory=False)
-    tags = tags.astype(str)
-    tags['imdbId'] = '0'+tags['imdbId']
+    tags = pd.read_csv('data/links.csv', dtype=str, low_memory=False)
 
     # movies : pd.DataFrame
     movies = pd.read_csv('data/movies.csv', low_memory=False)
@@ -39,10 +37,9 @@ class Recommender:
         temp = temp.reset_index()
         return int(temp.iloc[0,1])
 
-
     # getRecommendation() will add movie recommendations to the MovieID pd.Series every time it is call,
     # it will make sure that the movie has not already been recommended.
-    def getRecommendation(self, mvId):
+    def getRecommendation(self, mvId, size):
 
         # isolates ratings of the current movie being used for recommendation
         movieRatings = self.ct1.loc[:,mvId]
@@ -68,14 +65,14 @@ class Recommender:
         final = semifinal[semifinal['size'] > 100]
         final = final.sort_values(['correlation'], ascending=False)
         final = final.reset_index()
-        return final['title'][0:10]
+        return final['title'][0:size]
         
     def has_movie(self, check):
         temp = len(self.tags[self.tags['imdbId'] == check])
-        if(temp != 0):
-            return True
-        else:
+        if(temp == 0):
             return False
+        else:
+            return True
 
     def __init__(self):
         self.imdb = True
