@@ -29,10 +29,10 @@ class Options1(userOptions):
 		while(valid1 == False):
 			temp1 = input()
 			if(self.is_not_integer(temp1)):
-				print('\nInvalid input. please enter either 1 or 0\n')
+				print('\nInvalid input. Please enter either 1 or 0\n')
 			else:
 				if( (int(temp1) != 1) & (int(temp1) != 0) ):
-					print('\nInvalid input. please enter either 1 or 0\n')
+					print('\nInvalid input. Please enter either 1 or 0\n')
 					continue
 				else:
 					valid1 = True
@@ -45,10 +45,10 @@ class Options1(userOptions):
 		while(valid2 == False):
 			temp2 = input()
 			if(self.is_not_integer(temp2)):
-				print('\nInvalid input. please enter either 1 or 0\n')
+				print('\nInvalid input. Please enter either 1 or 0\n')
 			else:
 				if( (int(temp2) != 1) & (int(temp2) != 0) ):
-					print('\nInvalid input. please enter either 1 or 0\n')
+					print('\nInvalid input. Please enter either 1 or 0\n')
 					continue
 				else:
 					valid2 = True
@@ -61,10 +61,10 @@ class Options1(userOptions):
 		while(valid3 == False):
 			temp3 = input()
 			if(self.is_not_integer(temp3)):
-				print('\nInvalid input. please enter either 1 or 0\n')
+				print('\nInvalid input. Please enter either 1 or 0\n')
 			else:
 				if( (int(temp3) != 1) & (int(temp3) != 0) ):
-					print('\nInvalid input. please enter either 1 or 0\n')
+					print('\nInvalid input. Please enter either 1 or 0\n')
 					continue
 				else:
 					valid3 = True
@@ -76,25 +76,25 @@ class Options1(userOptions):
 		while(valid4 == False):
 			temp4 = input()
 			if(self.is_not_integer(temp4)):
-				print('\nInvalid input. please enter either 1 or 0\n')
+				print('\nInvalid input. Please enter either 1 or 0\n')
 			else:
 				if( (int(temp4) != 1) & (int(temp4) != 0) ):
-					print('\nInvalid input. please enter either 1 or 0\n')
+					print('\nInvalid input. Please enter either 1 or 0\n')
 					continue
 				else:
 					valid4 = True
 		self.userTaste.loc[3] = int(temp4)
 		
 	def giveUserRecs(self):
-		print(self.currentPosition)
 		if(self.currentPosition > 3):
-			print("Sorry, out of recommendations. Please restart the program!")
+			print("\nSorry, out of recommendations. Please restart the program!")
 		else:	
 			if(self.userTaste.loc[self.currentPosition] == 1):
-				print("Here is a list of recommended movies for you:\n")
+				print("\nHere is a list of recommended movies for you:\n")
 				print(
 					self.r.getRecommendation(
-						self.r.imdbToMovie(self.movieVec.loc[self.currentPosition])
+						self.r.imdbToMovie(self.movieVec.loc[self.currentPosition]),
+						10
 					) 
 				)	
 				self.currentPosition = self.currentPosition + 1

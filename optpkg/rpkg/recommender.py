@@ -37,10 +37,9 @@ class Recommender:
         temp = temp.reset_index()
         return int(temp.iloc[0,1])
 
-
     # getRecommendation() will add movie recommendations to the MovieID pd.Series every time it is call,
     # it will make sure that the movie has not already been recommended.
-    def getRecommendation(self, mvId):
+    def getRecommendation(self, mvId, size):
 
         # isolates ratings of the current movie being used for recommendation
         movieRatings = self.ct1.loc[:,mvId]
@@ -66,7 +65,7 @@ class Recommender:
         final = semifinal[semifinal['size'] > 100]
         final = final.sort_values(['correlation'], ascending=False)
         final = final.reset_index()
-        return final['title'][0:10]
+        return final['title'][0:size]
         
     def has_movie(self, check):
         temp = len(self.tags[self.tags['imdbId'] == check])
