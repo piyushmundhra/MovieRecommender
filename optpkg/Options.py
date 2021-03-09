@@ -22,6 +22,7 @@ class Options(userOptions):
 		language= input("What language should the movie be in (French, German, English, Hindi, etc),press none if not applicable")
 		genre= input("What genre of movies do you want to watch(Historical Fiction, Documentry, Science Fiction, etc)press none if not applicable")
 		director= input("What director's movie do you want to watch (ex Christopher Nolan, George Lucas, Steven Spielberg, James Cameron)press none if not applicable")
+		
 	def getUserTaste(self):
 		print('Please type a \'1\' if you like the movie, or type a \'-1\' if you do not like the movie or have not watched it')
 	
@@ -76,6 +77,3 @@ class Options(userOptions):
 		temp = self.userTaste[self.currentRec] + ""
 		return self.r.getRecommendation(self.r.imdbToMovie(temp))
 
-	#bool
-	def approveMovie(self, movieID):
-		#loop in which movieID gets compared with IMDB ids

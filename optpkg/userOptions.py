@@ -15,7 +15,3 @@ class userOptions(ABC):
     @abstractmethod
     def giveUserRecs(self):
         pass
-
-    @abstractmethod
-    def approveMovies(self):
-        pass

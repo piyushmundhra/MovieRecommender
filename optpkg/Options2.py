@@ -12,7 +12,7 @@ class Options2(userOptions):
 	def getUserOptions(self):
 		temp=int(input("How many movies do you want in yout recommendation list? Please put a whole number up to 15.")
  		
-		if( (0<temp) and (temp<=15) and is_integer(temp)):
+		if( ((0<temp) & (temp<16)) ):
 			numMovies=temp
 		else:
 			print("Invalid input, Please try again")
