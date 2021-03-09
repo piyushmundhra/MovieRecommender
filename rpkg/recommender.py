@@ -1,7 +1,11 @@
+# recommender system based on: https://towardsdatascience.com/a-simple-movie-recommendation-system-d135cfd0a22d
+
 import pandas as pd
 import numpy as np
-import sklearn as skl 
 import csv
+import warnings
+warnings.filterwarnings('ignore')
+
 
 class Recommender:
     # These DataFrames will contain all the information about the movies that will be used
@@ -10,49 +14,68 @@ class Recommender:
     # GitHub has limited file size so datasets will be stored remotely on Google Drive
 
     # tags : pd.DataFrame
-    urltags = 'https://drive.google.com/file/d/1_AHvEpjmG9u3HHXcme1W21vD91tQjXAc/view?usp=sharing'
-    pathtags = 'https://drive.google.com/uc?export=download&id=' + urltags.split('/')[-2]
-    tags = pd.read_csv(pathtags)
+    tags = pd.read_csv('data/links.csv', low_memory=False)
+    tags = tags.astype(str)
+    tags['imdbId'] = '0'+tags['imdbId']
 
     # movies : pd.DataFrame
-    urlmovies = 'https://drive.google.com/file/d/1lacw_PaUsvlzpRemtnAfcKqGSkx1JBbY/view?usp=sharing'
-    pathmovies = 'https://drive.google.com/uc?export=download&id=' + urlmovies.split('/')[-2]
-    movies = pd.read_csv(pathmovies, low_memory=False)
+    movies = pd.read_csv('data/movies.csv', low_memory=False)
 
     # ratings : pd.DataFrame
-    urlratings = 'https://drive.google.com/file/d/1m4nj5Mf36sWq_8bfT_e0TiibyGo22s2p/view?usp=sharing'
-    pathratings = 'https://drive.google.com/uc?export=download&id=' + urlratings.split('/')[-2]
-    ratings = pd.read_csv(pathratings)
+    ratings = pd.read_csv('data/ratings.csv', low_memory=False)
 
     # movieInfo : pd.DataFrame
-    urlMI = 'https://drive.google.com/file/d/1b_Jmt75aZRBh2z5TxYXnOsA17l81H_TJ/view?usp=sharing'
-    pathMI = 'https://drive.google.com/uc?export=download&id=' + urlMI.split('/')[-2]
-    movieInfo = pd.read_csv(pathMI)
+    movieInfo = pd.read_csv('data/tags.csv', low_memory=False)
 
-    # Dataset cleaning
-    movies = movies.fillna(0)
-    movies['imdb_title_id'] = movies['imdb_title_id'].astype(str)
-    movies['imdb_title_id'] = movies['imdb_title_id'].str.replace('tt', '')
-
-    tags['imdbId'] = '0' + tags['imdbId'].astype(str)
+    # movieVec : pd.Series 
+    # movieId's of the movies the user has to rate
+    movieVec = pd.Series([1,2,3,4,5,6,7,8,9,10])
 
     # Crosstab that accumulates user ratings and movie ID's
     ct1 = pd.pivot_table(ratings, values = 'rating', columns = ['movieId'], index = ['userId'] )
 
-    
+    # id : string : imdbId of movie
+    def imdbToMovie(self, id):
+        temp = self.tags[self.tags['imdbId'] == id]
+        temp = temp.reset_index()
+        return int(temp.iloc[0,1])
+
+
     # getRecommendation() will add movie recommendations to the MovieID pd.Series every time it is call,
     # it will make sure that the movie has not already been recommended.
-    def getRecommendation(self):
-        return 0
+    def getRecommendation(self, mvId):
+
+        # isolates ratings of the current movie being used for recommendation
+        shrekRatings = self.ct1.loc[:,mvId]
+
+        # computes the pairwise correlation of the selected movie and all other movies 
+        rec = self.ct1.corrwith(shrekRatings)
+        rec = rec.dropna()
+        recdf = pd.DataFrame(rec, columns=['correlation'])
+
+        # creates a DataFrame containing information about the number of ratings per movie
+        filtered = self.ratings.groupby('movieId').size()
+        filteredDF = pd.DataFrame(filtered, columns=['size'])
+
+        # movie names 
+        nms = self.movies.set_index('movieId')['title']
+        nmsdf = pd.DataFrame(nms, columns=['title'])
+
+        # creates a dataframe that contains all the movieId's, and the corresponding correlation and sample size
+        semifinal = recdf.join(filteredDF)
+        semifinal = semifinal.join(nmsdf)
+
+        # filters the semifinal dataframe based on sample size (number of ratings must be at least 100)
+        final = semifinal[semifinal['size'] > 100]
+        final = final.sort_values(['correlation'], ascending=False)
+        final = final.reset_index()
+        return final['title'][0:10]
         
 
     def __init__(self, uT):
         self.userTaste = uT
 
 
-r = Recommender(pd.Series([0,0,0,0]))
-print(r.movies.shape)
-print(r.tags.shape)
-print(r.ratings.head())
-print(r.ct1)
+
+
 
