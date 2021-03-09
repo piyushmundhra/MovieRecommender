@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod 
-from ..rpkg import recommender
-from recommender import Recommender
+from optpkg.rpkg.recommender import Recommender
 
 class userOptions(ABC):
     output = ""
