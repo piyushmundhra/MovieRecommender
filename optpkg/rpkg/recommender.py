@@ -71,7 +71,7 @@ class Recommender:
         return final['title'][0:10]
         
     def has_movie(self, check):
-        temp = self.tags[self.tags['imdbId'] == check]
+        temp = len(self.tags[self.tags['imdbId'] == check])
         if(temp != 0):
             return True
         else:
