@@ -1,4 +1,4 @@
-# recommender system based on: https://towardsdatascience.com/a-simple-movie-recommendation-system-d135cfd0a22d
+# recommender system based loosely on: https://towardsdatascience.com/a-simple-movie-recommendation-system-d135cfd0a22d
 
 import pandas as pd
 import numpy as np
