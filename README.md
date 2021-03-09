@@ -33,5 +33,6 @@
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library
  > * Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
- >   * The first screenshot shows our test of invalid inputs of the initial prompt, we tested all edge cases and made sure that the program was correctly handling them. In this test, the following are the ordered inputs: '\n', '-', 'f', '-1', '-2' ![initial prompt invalid input](https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/initialPrompt.png)
+ >   * The first screenshot shows our test of invalid inputs of the initial prompt, we tested all edge cases and made sure that the program was correctly handling them. In this test, the following are the ordered inputs: '\n', '-', 'f', '-1', '-2'. ![initial prompt invalid input](https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/initialPrompt.png)
+ >   * Similarly, the next screenshot shows testing of invalid inputs for the movie rating segment of our Options2 derived class. Again, theordered inputs: '\n', '-', 'f', '-1', '-2'. We only include a screenshot of the testing done for the first movie, but the same tests were conducted for each consequent movie that has to be rated by the user. ![invalid movie rating](https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/movieInvalidEntry.png)
  
