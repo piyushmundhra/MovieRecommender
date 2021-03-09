@@ -27,10 +27,6 @@ class Recommender:
     # movieInfo : pd.DataFrame
     movieInfo = pd.read_csv('data/tags.csv', low_memory=False)
 
-    # movieVec : pd.Series 
-    # movieId's of the movies the user has to rate
-    movieVec = pd.Series([1,2,3,4,5,6,7,8,9,10])
-
     # Crosstab that accumulates user ratings and movie ID's
     ct1 = pd.pivot_table(ratings, values = 'rating', columns = ['movieId'], index = ['userId'] )
 
