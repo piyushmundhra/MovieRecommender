@@ -5,7 +5,7 @@ from optpkg.rpkg.recommender import Recommender
 
 class Options1(userOptions):
 	currentPosition = 0
-	movieVec = pd.Series(["0114709", "0372784", "5013056", "1320244"])
+	movieVec = pd.Series(["0114709", "0372784", "0076759", "1179056"])
 	userTaste = pd.Series([-1,-1,-1,-1])
 	r = Recommender()
 	
