@@ -36,13 +36,14 @@
  > * Pandas: Once we are sure that the installation is Python 3.0 or above, we import pandas using <code>$ pip install pandas</code>.
  > Downloading program:
  > * After that, we git clone the repository, which can be found in our github page. 
- > * Then we go into the repository. using <code> $ cd final-project-svole001-jhan136-pund001 </code<.
+ > * Then we go into the repository. using <code> $ cd final-project-svole001-jhan136-pund001 </code>.
  > Running the program:
  > We then run the python code by using <code> $ python3 __main__.py </code>, our main executable file. 
  > Details of utilizing features:
  > * If you are using the option that asks you to rate movies, you can only get recommendations up to the number of movies you state you like.
  > * If you are specifying an IMDb id to generate recommendations, you can keep regenerating the recommendation list (this should not change)
  > * The rest of the program includes prompts and is self expanatory.
+ 
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
  > * First, we discuss the testing for the Recommender class. This class has unit tests that thoroughly tested edge cases and invalid inputs for imdbToMovie() and has_movie(). For imdbToMovie(), we test several forms of invalid inputs, also test to see if it correctly converts the first, last, and random median movie. For has_movie(), the testing conducted is nearly the same. To test the getRecommendation() function, we used the function in our implemented userOptions derived classes and made sure that we were getting recommendations. This is not possible to test with unit tests since it depends on user input and can't be predicted.
