@@ -31,7 +31,7 @@
  ## Installation/Usage
  > Instructions on installing and running your application: 
  > * Python environment details:
- >   * The program required you to be running Python 3.0 or above. This can be checked with <code>$ python3 --version</code>
+ >   * The program required you to be running Python 3.0 or above. This can be checked with <code>$ python --version</code>
  > * Dependancies
  >   * Pandas: Once we are sure that the installation is Python 3.0 or above, we import pandas using <code>$ pip install pandas</code>.
  > * Downloading and running program:
