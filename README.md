@@ -30,19 +30,19 @@
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application: 
- > Python environment details:
- > * The program required you to be running Python 3.0 or above. This can be checked with <code>$ python3 --version</code>
- > Dependancies
- > * Pandas: Once we are sure that the installation is Python 3.0 or above, we import pandas using <code>$ pip install pandas</code>.
- > Downloading program:
- > * After that, we git clone the repository, which can be found in our github page. 
- > * Then we go into the repository. using <code> $ cd final-project-svole001-jhan136-pund001 </code>.
+ > * Python environment details:
+ >   * The program required you to be running Python 3.0 or above. This can be checked with <code>$ python3 --version</code>
+ > * Dependancies
+ >   * Pandas: Once we are sure that the installation is Python 3.0 or above, we import pandas using <code>$ pip install pandas</code>.
+ > * Downloading and running program:
+ >   * After that, we git clone the repository, which can be found in our github page. 
+ >   * Then we go into the repository. using <code> $ cd final-project-svole001-jhan136-pund001 </code>.
  > Running the program:
- > We then run the python code by using <code> $ python3 __main__.py </code>, our main executable file. 
- > Details of utilizing features:
- > * If you are using the option that asks you to rate movies, you can only get recommendations up to the number of movies you state you like.
- > * If you are specifying an IMDb id to generate recommendations, you can keep regenerating the recommendation list (this should not change)
- > * The rest of the program includes prompts and is self expanatory.
+ > We then run the python code by using <code> $ python3 \_\_main\_\_.py </code>, our main executable file. 
+ > * Details of utilizing features:
+ >   * If you are using the option that asks you to rate movies, you can only get recommendations up to the number of movies you state you like.
+ >   * If you are specifying an IMDb id to generate recommendations, you can keep regenerating the recommendation list (this should not change)
+ >   * The rest of the program includes prompts and is self expanatory.
  
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
