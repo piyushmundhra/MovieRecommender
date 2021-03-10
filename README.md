@@ -19,12 +19,6 @@
  > ![composite pattern](https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/Final%20Project%20OMT%20(2).png)
 
  > The program will be using a Recommender class that will be the underlying algorithm for movie recommendations. We will be using public datasets to train the model. An object of this class will be a member of the Options class, which is derived from the userOptions abstract class. We plan on making multiple derived classes from the userOptions class so that the user can choose different filtering critera based on their needs. We will then create a main function that will have a harness using the userOptions class and interact with the user using the command line.
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
  > The recommender system should start by asking the user for one of two options. The first option, chosen by inputting "0", would have movies recommended to them based off of whether they like or dislike a selection of movies presented to them.\
