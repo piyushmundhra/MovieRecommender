@@ -44,6 +44,9 @@
  >   * If you are specifying an IMDb id to generate recommendations, you can keep regenerating the recommendation list (this should not change)
  >   * The rest of the program includes prompts and is self expanatory.
  
+ ## Memory checks
+ > A memory leak happens when memory is specifically allocated and never deallocated. When strictly speaking of Python code, memory leaks are not possible because of Python's garbage collecter (aka GC). In Python, memory leaks can only occur from the Python interpreter or and libraries or modules written in C/C++. In this project, 100% of our code is done using Python, without any strong references. This means that the only possible sources of memory leaks are outside the scope of this project. In addition, the only modules used are major Python libraries. Therefore, Python does not have a memory leak tool with which we can check for our memory leaks like in Valgrind.
+ 
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
  > * First, we discuss the testing for the Recommender class. This class has unit tests that thoroughly tested edge cases and invalid inputs for imdbToMovie() and has_movie(). For imdbToMovie(), we test several forms of invalid inputs, also test to see if it correctly converts the first, last, and random median movie. For has_movie(), the testing conducted is nearly the same. To test the getRecommendation() function, we used the function in our implemented userOptions derived classes and made sure that we were getting recommendations. This is not possible to test with unit tests since it depends on user input and can't be predicted.
