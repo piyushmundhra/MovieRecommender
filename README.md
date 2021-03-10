@@ -9,7 +9,7 @@
  > We plan to use the following languages and tools for this project:
  >   * We plan to use Python, when working with large data sets and machine learning, its most sensible to use Python. 
  > 
- > In terms of how the program will work, we plan to have the user rate a set of 10-15 movies, from which we will try to "calculate" their taste. We plan to output the movie we think they will like most (from where they can also opt to ask for another recommendation). 
+ > In terms of how the program will work, we have the user rate a set of 4 movies, from which we will try to "calculate" their taste. We plan to output movies we think they will like most (from where they can also opt to ask for another recommendation). They can also choose to receive recommendations based on specific movies by inputting an IMDb id.
  > 
  > We will be using the following design patterns to organize this project:
  >   * We are using the Facade Design Pattern. We plan to develop an algorithm that helps us suggest a movie to a user. We do not want to overcomplicate the user experience, so we will have to be a way to hide the algorithm behind the user interface. We think it may be hard to get sufficient information from the user in a terminal based program, so we plan on finding a way to train the recommender system to use a small set of movies to understand the user's taste. 
