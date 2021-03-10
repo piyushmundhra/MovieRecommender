@@ -28,14 +28,23 @@
  
  ## Screenshots
  > The recommender system should start by asking the user for one of two options. The first option, chosen by inputting "0", would have movies recommended to them based off of whether they like or dislike a selection of movies presented to them.\
- >  <img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/userTaste%20photo.png width="450"/>\
+ > <br />
+ >  &nbsp;&nbsp;<img src = https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/userTaste%20photo.png width="450"/>\
+ >  <br />
  >  The second option, chosen by inputting "1",  would have movies recommended to the user based off of a movie they already like. The user starts by selecting the amount of movies that will be recommended to them, which can be anywhere from 1 to 10. After which, they input the movie of their choice, via IMDB ID.\
- >     <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options2_apocalypsenow.png width="450"/> \
- >     <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(57).png width="450"/> \
+ >  <br />
+ >     &nbsp;&nbsp;<img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/options2_apocalypsenow.png width="450"/> \
+ >     <br />
+ >     &nbsp;&nbsp;<img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(57).png width="450"/> \
+ >     <br />
  >     In any case where input is not what is intended, the user will be prompted to enter a valid input. \
- >     <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(50).png width="450"/>\
- >     <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(52).png width="450"/>\
- >     <img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(54).png width="450"/>\
+ >     <br />
+ >     &nbsp;&nbsp;<img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(50).png width="450"/>\
+ >     <br />
+ >     &nbsp;&nbsp;<img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(52).png width="450"/>\
+ >     <br />
+ >     &nbsp;&nbsp;<img src=https://github.com/cs100/final-project-svole001-jhan136-pund001/blob/master/screenshots/Screenshot%20(54).png width="450"/>\
+ >     <br />
  >     Finally, at the end of both options, the user will be prompted for whether they would like to reset the program, see more recommendations, or exit out of the system.
  ## Installation/Usage
  > Instructions on installing and running your application: 
