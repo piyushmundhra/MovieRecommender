@@ -45,7 +45,7 @@
  >   * The rest of the program includes prompts and is self expanatory.
  
  ## Memory checks
- > A memory leak happens when memory is specifically allocated and never deallocated. When strictly speaking of Python code, memory leaks are not possible because of Python's garbage collecter (aka GC). In Python, memory leaks can only occur from the Python interpreter or and libraries or modules written in C/C++. In this project, 100% of our code is done using Python, without any strong references. This means that the only possible sources of memory leaks are outside the scope of this project. In addition, the only modules used are major Python libraries. Therefore, Python does not have a memory leak tool with which we can check for our memory leaks like in Valgrind.
+ > A memory leak happens when memory is specifically allocated and never deallocated. When strictly speaking of Python code, memory leaks are not possible because of Python's garbage collecter (aka GC). In Python, memory leaks can only occur from the Python interpreter or and libraries or modules written in C/C++. In this project, 100% of our code is done using Python, without any strong references. This means that the only possible sources of memory leaks are outside the scope of this project. In addition, the only modules used are major Python libraries. Based on all of this, we concluded that our code cannot have any memory leaks based on the information we found regarding Python and memory.
  
  ## Testing
  > The testing of our project was conducted in two ways: manual testing and python's built in unittest library. Manual testing had to be used because many of our methods were based on user input and command line interaction. To test these we thought of edge cases and tested them. 
